@@ -81,13 +81,13 @@ function sendMail(String $sender, String $name, String $subject, String $body)
     $mail->isSMTP();                                    // Set mailer to use SMTP
     $mail->Host = 'smtp.gmail.com';                     // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                             // Enable SMTP authentication
-    $mail->Username = 'eyenebula45@gmail.com';           // SMTP username
-    $mail->Password = 'xmupqjbxduldfvuc';              // SMTP password (use an app password if 2FA is enabled)
+    $mail->Username = 'gmail address';           // SMTP username
+    $mail->Password = 'gmail adress app password';              // SMTP password (use an app password if 2FA is enabled)
     $mail->SMTPSecure = 'tls';                           // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587;                                  // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('eyenebula45@gmail.com', 'Gallery Cafe');
+    $mail->setFrom('gmail address', 'Gallery Cafe');
     $mail->addAddress($sender, $name);     // Add a recipient
 
     // Content
