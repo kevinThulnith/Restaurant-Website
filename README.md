@@ -11,7 +11,7 @@
 <li>User verification</li>
 <li>Make table reservations</li>
 <li>Edit profile</li>
-<li>Specific user types can access specific pages</li>
+<li>Specific user types can only access specific pages</li>
 </ul>
 
 <h2>Admin Functions</h2>
