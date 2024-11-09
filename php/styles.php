@@ -35,35 +35,6 @@
 <?php
 session_start();
 
-// navigation bar
-function navigation(int $n)
-{
-  echo ($n == 1) ? "<li><a class='active' href='home.php'>Home</a></li>" : "<li><a href='home.php' >Home</a></li>";
-  echo ($n == 2) ? "<li><a class='active' href='about.php'>About</a></li>" : "<li><a href='about.php'>About</a></li>";
-  echo ($n == 3) ? "<li><a class='active' href='menu.php'>Specialties</a></li>" : "<li><a href='menu.php'>Specialties</a></li>";
-  echo ($n == 4) ? "<li><a class='active' href='bLog.php'>BLog</a></li>" : "<li><a href='bLog.php'>BLog</a></li>";
-  echo ($n == 5) ? "<li><a class='active' href='contact.php'>Contact</a></li>" : "<li><a href='contact.php'>Contact</a></li>";
-}
-
-// set page header
-function top($nme, $hd)
-{
-  echo "<section class='hero-wrap hero-wrap-2' style='background-image: url(../images/customer.jpg)' data-stellar-background-ratio='0.5'>
-        <div class='overlay'></div>
-        <div class='container'>
-          <div class='row no-gutters slider-text align-items-center justify-content-center'>
-            <div class='col-md-9 ftco-animate text-center'>
-              <h1 class='mb-2 bread'>$hd</h1>
-              <p class='breadcrumbs'>
-                <span class='mr-2'><a href='home.php'>Home <i class='ion-ios-arrow-forward'></i></a></span>
-                <span>$nme <i class='ion-ios-arrow-forward'></i></span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>";
-}
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -111,15 +82,23 @@ function maskEmail($email)
   return $maskedEmail;
 }
 
-// admin unterfaces navigation bar
-function navigationAdmin(int $n)
+// set page header
+function top($nme, $hd)
 {
-  echo ($n == 1) ? "<li><a class='active' href='dashboard.php'>Dashboard</a></li>" : "<li><a href='dashboard.php'>Dashboard</a></li>";
-  echo ($n == 2) ? "<li><a class='active' href='resavation.php'>Reservations</a></li>" : "<li><a href='resavation.php'>Reservations</a></li>";
-  echo ($n == 3) ? "<li><a class='active' href='food.php'>Foods</a></li>" : "<li><a href='food.php'>Foods</a></li>";
-  echo ($n == 4) ? "<li><a class='active' href='customer.php'>Customers</a></li>" : "<li><a href='customer.php'>Customers</a></li>";
-  echo ($n == 5) ? "<li><a class='active' href='table.php'>Tables</a></li>" : "<li><a href='table.php'>Tables</a></li>";
-  echo ($n == 6) ? "<li><a class='active' href='orders.php'>Orders</a></li>" : "<li><a href='orders.php'>Orders</a></li>";
+  echo "<section class='hero-wrap hero-wrap-2' style='background-image: url(../images/customer.jpg)' data-stellar-background-ratio='0.5'>
+        <div class='overlay'></div>
+        <div class='container'>
+          <div class='row no-gutters slider-text align-items-center justify-content-center'>
+            <div class='col-md-9 ftco-animate text-center'>
+              <h1 class='mb-2 bread'>$hd</h1>
+              <p class='breadcrumbs'>
+                <span class='mr-2'><a href='home.php'>Home <i class='ion-ios-arrow-forward'></i></a></span>
+                <span>$nme <i class='ion-ios-arrow-forward'></i></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>";
 }
 
 // admin interface page header
@@ -141,7 +120,7 @@ function topAdmin($nme, $hd)
       </section>";
 }
 
-// admin unterfaces navigation bar
+// staff unterfaces navigation bar
 function navigationStaff(int $n)
 {
   echo ($n == 1) ? "<li><a class='active' href='dashboard.php'>Dashboard</a></li>" : "<li><a href='dashboard.php'>Dashboard</a></li>";
@@ -149,4 +128,25 @@ function navigationStaff(int $n)
   echo ($n == 3) ? "<li><a class='active' href='food.php'>Menu Items</a></li>" : "<li><a href='food.php'>Menu Items</a></li>";
   echo ($n == 4) ? "<li><a class='active' href='orders.php'>Orders</a></li>" : "<li><a href='orders.php'>Orders</a></li>";
   echo ($n == 5) ? "<li><a class='active' href='table.php'>Tables</a></li>" : "<li><a href='table.php'>Tables</a></li>";
+}
+
+// Customer interface navigation
+function navigation(int $n)
+{
+  echo ($n == 1) ? "<li><a class='active' href='home.php'>Home</a></li>" : "<li><a href='home.php' >Home</a></li>";
+  echo ($n == 2) ? "<li><a class='active' href='about.php'>About</a></li>" : "<li><a href='about.php'>About</a></li>";
+  echo ($n == 3) ? "<li><a class='active' href='menu.php'>Specialties</a></li>" : "<li><a href='menu.php'>Specialties</a></li>";
+  echo ($n == 4) ? "<li><a class='active' href='bLog.php'>BLog</a></li>" : "<li><a href='bLog.php'>BLog</a></li>";
+  echo ($n == 5) ? "<li><a class='active' href='contact.php'>Contact</a></li>" : "<li><a href='contact.php'>Contact</a></li>";
+}
+
+// admin unterfaces navigation bar
+function navigationAdmin(int $n)
+{
+  echo ($n == 1) ? "<li><a class='active' href='dashboard.php'>Dashboard</a></li>" : "<li><a href='dashboard.php'>Dashboard</a></li>";
+  echo ($n == 2) ? "<li><a class='active' href='resavation.php'>Reservations</a></li>" : "<li><a href='resavation.php'>Reservations</a></li>";
+  echo ($n == 3) ? "<li><a class='active' href='food.php'>Foods</a></li>" : "<li><a href='food.php'>Foods</a></li>";
+  echo ($n == 4) ? "<li><a class='active' href='customer.php'>Customers</a></li>" : "<li><a href='customer.php'>Customers</a></li>";
+  echo ($n == 5) ? "<li><a class='active' href='table.php'>Tables</a></li>" : "<li><a href='table.php'>Tables</a></li>";
+  echo ($n == 6) ? "<li><a class='active' href='orders.php'>Orders</a></li>" : "<li><a href='orders.php'>Orders</a></li>";
 }
