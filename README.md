@@ -11,7 +11,6 @@
 <li>User verification</li>
 <li>Make table reservations</li>
 <li>Edit profile</li>
-<li>Specific user types can only access specific pages</li>
 </ul>
 
 <h2>Admin Functions</h2>
@@ -42,7 +41,10 @@
 <li>Make a reservation</li>
 <li>View menu items</li>
 </ul>
-<h2>Data security features</h2>
+<h2>Utility and Security features</h2>
 <ul>
+<li>Specific user types can only access specific pages</li>
 <li>Force https on server</li>
+<li>Error handling</li>
+<li>Add security headers</li>
 </ul>

@@ -1,5 +1,5 @@
 <?php
-require_once './php/https.php';
+require_once '../php/https.php';
 // allow acces only for admin users
 if (isset($_SESSION['username'])) {
 
