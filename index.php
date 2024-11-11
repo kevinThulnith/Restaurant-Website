@@ -1,4 +1,5 @@
 <?php
+require_once 'php/https.php';
 session_start();
 
 // check user if logged in or an admin

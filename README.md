@@ -42,3 +42,7 @@
 <li>Make a reservation</li>
 <li>View menu items</li>
 </ul>
+<h2>Data security features</h2>
+<ul>
+<li>Force https on server</li>
+</ul>
