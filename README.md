@@ -1,5 +1,7 @@
 # Restaurant-Website (Full stack)
 
+<br><img src="images/picture10.jpg"><br><br><br>
+
 <h1>Main Functionality</h1>
 <ul>
 <li>Cart feature(add, remove, clear, submit)</li>
