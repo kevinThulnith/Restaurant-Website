@@ -1,6 +1,6 @@
 # Restaurant-Website (Full stack)
 
-<br><img src="images/picture10.jpg"><br><br><br>
+<img src="images/picture10.jpg"><br>
 
 <h1>Main Functionality</h1>
 <ul>
