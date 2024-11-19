@@ -47,7 +47,8 @@
 <h2>⚙️ Utility and Security features</h2>
 <ul>
 <li>Specific user types can only access specific pages</li>
+<li>Cross-Site Request Forgery (CSRF) Protection</li>
 <li>Force https on server</li>
-<li>Error handling</li>
 <li>Add security headers</li>
+<li>Error handling</li>
 </ul>
