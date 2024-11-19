@@ -1,7 +1,30 @@
 # Restaurant-Website (Full stack)
 
+Full stack restuarant website developed with Php, Css, Html, JavaScript, Composer
+
 <img src="images/picture10.jpg"><br>
 
+## Install PHPMailer with Composer
+
+Run the following Composer command to install PHPMailer:
+
+```bash
+composer require phpmailer/phpmailer
+```
+
+## Autoload PHPMailer
+
+Send email fucntion imports
+
+```javascript
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require '../vendor/autoload.php';
+require '../vendor/autoload.php';
+```
+
+<br>
 <h1>🚀 Main Functionality</h1>
 <ul>
 <li>Cart feature(add, remove, clear, submit)</li>
