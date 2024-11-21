@@ -76,6 +76,6 @@ require '../vendor/autoload.php';
 <li>Error handling</li>
 </ul>
 
-## SSL Certificate 
+## SSL Certificate
 
-Genarate via SSl Certificate by using this link <a href="https://youtu.be/zrbaE1Wdviw">🔗 youtube</a> for your loocal project
+Genarate via SSl Certificate by using this link <a href="https://youtu.be/zrbaE1Wdviw">🔗youtube</a> for your loocal project
