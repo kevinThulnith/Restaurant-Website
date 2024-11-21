@@ -12,6 +12,14 @@ Run the following Composer command to install PHPMailer:
 composer require phpmailer/phpmailer
 ```
 
+## View installed SSL Certificates
+
+View and mange installed SSL certificates on your local server by pressing win key + r, giving this command
+
+```bash
+certmgr.msc
+```
+
 ## Autoload PHPMailer
 
 Send email fucntion imports
@@ -78,4 +86,4 @@ require '../vendor/autoload.php';
 
 ## SSL Certificate
 
-Genarate via SSl Certificate by using this link <a href="https://youtu.be/zrbaE1Wdviw">🔗youtube</a> for your loocal project
+Genarate via SSl Certificate by using this link 🔗<a href="https://youtu.be/zrbaE1Wdviw">youtube</a> for your loocal project
