@@ -4,7 +4,7 @@ require_once "../php/DbConnect.php";
 function getCustomerList()
 {
   global $conn;
-  $query_run = mysqli_query($conn, "SELECT user_id, name, address, dob FROM user WHERE is_customer = 1;");
+  $query_run = mysqli_query($conn, "SELECT user_id, name, address, dob, is_active FROM user WHERE is_customer = 1;");
   if ($query_run) {
     if (mysqli_num_rows($query_run) > 0) {
       $res = mysqli_fetch_all($query_run, MYSQLI_ASSOC);

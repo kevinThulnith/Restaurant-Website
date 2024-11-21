@@ -75,3 +75,7 @@ require '../vendor/autoload.php';
 <li>Add security headers</li>
 <li>Error handling</li>
 </ul>
+
+## SSL Certificate 
+
+Genarate via SSl Certificate by using this link <a href="https://youtu.be/zrbaE1Wdviw">🔗 youtube</a> for your loocal project
