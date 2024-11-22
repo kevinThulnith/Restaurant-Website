@@ -81,6 +81,7 @@ require '../vendor/autoload.php';
 <li>Cross-Site Request Forgery (CSRF) Protection</li>
 <li>Force https on server</li>
 <li>Add security headers</li>
+<li>Secure Logout</li>
 <li>Error handling</li>
 </ul>
 
