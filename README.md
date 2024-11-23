@@ -106,8 +106,3 @@ This project is a web application for **The Gallery Café**, designed to manage 
    ```bash
    git clone https://github.com/KevinThulnith/Restaurant-Website.git
    ```
-
-   [![Build Status](https://travis-ci.org/PHPOffice/PHPProject.svg?branch=master)](https://travis-ci.org/PHPOffice/PHPProject)
-   [![Code Quality](https://scrutinizer-ci.com/g/PHPOffice/PHPProject/badges/quality-score.png?s=b5997ce59ac2816b4514f3a38de9900f6d492c1d)](https://scrutinizer-ci.com/g/PHPOffice/PHPProject/)
-   [![Code Coverage](https://scrutinizer-ci.com/g/PHPOffice/PHPProject/badges/coverage.png?s=742a98745725c562955440edc8d2c39d7ff5ae25)](https://scrutinizer-ci.com/g/PHPOffice/PHPProject/)
-   [![Total Downloads](https://poser.pugx.org/phpoffice/phpproject/downloads.png)](https://packagist.org/packages/phpoffice/phpproject)
