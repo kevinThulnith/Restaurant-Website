@@ -85,13 +85,19 @@ This project is a web application for **The Gallery Café**, designed to manage 
 
 - **Access Control**: Different user roles have restricted access to specific pages.
 - **Cross-Site Request Forgery (CSRF) Protection**: Enhanced form security.
-- **HTTPS**: Enforce secure communication.
-- **Security Headers**: Implement additional HTTP security headers.
+- **HTTPS Enforcement**: All traffic is redirected to HTTPS for secure communication.
+- **Security Headers**:
+  - `X-Content-Type-Options: nosniff`: Prevents browsers from interpreting files as a different MIME type.
+  - `X-Frame-Options: DENY`: Prevents the page from being embedded in an iframe.
+- **Session Security**:
+  - Secure session settings (HTTP-only cookies, secure cookies over HTTPS).
+  - Session regeneration every 30 minutes to mitigate session fixation.
+  - Session data validation on each request to prevent session hijacking (IP address and user agent checks).
+  - Automatic session destruction if mismatched session data is detected.
 - **CSRF Tokens**: Forms are secured with CSRF tokens.
 - **Secure Logout**: Proper session termination.
 - **Error Handling**: Robust error management for a smoother user experience.
 - **SSL Certificate**: Ensure a secure connection.
-  - Generate an SSL Certificate for local projects using [this tutorial](🔗youtube).
 
 ## 🛠️ Installation & Setup
 

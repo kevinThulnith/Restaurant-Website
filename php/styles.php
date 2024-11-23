@@ -33,7 +33,60 @@
   referrerpolicy="no-referrer" />
 
 <?php
+// !Add security headers
+header("X-Content-Type-Options: nosniff");
+header("X-Frame-Options: DENY");
+
+// Force HTTPS in PHP
+if (!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] !== 'on') {
+  header('Location: https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
+  exit();
+}
+
+// !et secure session settings
+ini_set('session.cookie_httponly', 1);  // Prevent JavaScript access to session cookies
+ini_set('session.cookie_secure', 1);    // Ensure cookies are sent over HTTPS only
+ini_set('session.use_only_cookies', 1); // Force the use of cookies for sessions
+
+// TODO: set session cockie params
+$lifetime = 3600; // 1 hour
+$path = '/'; // Available within the entire domain
+$domain = 'kans.local'; // Your domain name
+$secure = true; // Ensure the cookie is sent over HTTPS only
+$httponly = true; // Prevent JavaScript access to the cookie
+session_set_cookie_params($lifetime, $path, $domain, $secure, $httponly);
+
+ini_set('session.entropy_length', 32); // Increase the randomness
+ini_set('session.entropy_file', '/dev/urandom'); // Use a high-entropy source
+
 session_start();
+
+// !Regenerate session ID every 30 minutes (1800 seconds)
+if (!isset($_SESSION['last_regeneration'])) {
+  $_SESSION['last_regeneration'] = time();
+} elseif (time() - $_SESSION['last_regeneration'] > 1800) {
+  // Regenerate session ID and update timestamp
+  session_regenerate_id(true); // true deletes the old session ID
+  $_SESSION['last_regeneration'] = time();
+}
+
+// !Store user-specific session data (only if it's a new session)
+if (!isset($_SESSION['user_agent']) || !isset($_SESSION['ip_address'])) {
+  $_SESSION['user_agent'] = $_SERVER['HTTP_USER_AGENT'];
+  $_SESSION['ip_address'] = $_SERVER['REMOTE_ADDR'];
+}
+
+// !Validate session data on each request
+if (
+  $_SESSION['user_agent'] !== $_SERVER['HTTP_USER_AGENT'] ||
+  $_SESSION['ip_address'] !== $_SERVER['REMOTE_ADDR']
+) {
+  // Possible session hijacking attempt
+  session_unset();
+  session_destroy();
+  header("Location: ../server/login.php");
+  exit();
+}
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
