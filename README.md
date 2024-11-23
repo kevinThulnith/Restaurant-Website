@@ -32,60 +32,70 @@ require '../vendor/autoload.php';
 require '../vendor/autoload.php';
 ```
 
-<br>
-<h1>🚀 Main Functionality</h1>
-<ul>
-<li>Cart feature(add, remove, clear, submit)</li>
-<li>Login</li>
-<li>Logout</li>
-<li>Singup</li>
-<li>Reset password</li>
-<li>OTP sending</li>
-<li>User verification</li>
-<li>Make table reservations</li>
-<li>Edit profile</li>
-</ul>
-
-<h2>🏷️ Admin Functions</h2>
-<ul>
-<li>Add new user (customer/ admin/ staff)</li>
-<li>Manage users (employees and customers)</li>
-<li>Manage menu items</li>
-<li>Manage menu items types</li>
-<li>Manage orders (online and in shop)</li>
-<li>Manage reservations</li>
-<li>Manage resturant tables</li>
-<li>Manage resturant tables types</li>
-<li>View order/reservation info</li>
-</ul>
-
-<h2>🏷️ Employee Funtions</h2>
-<ul>
-<li>Manage menu items</li>
-<li>Manage orders (online and in shop)</li>
-<li>Manage reservations</li>
-<li>Manage resturant tables</li>
-<li>View order/reservation info</li>
-</ul>
-
-<h2>🏷️ Customer Fuctions</h2>
-<ul>
-<li>Make a order</li>
-<li>Make a reservation</li>
-<li>View menu items</li>
-</ul>
-
-<h2>⚙️ Utility and Security features</h2>
-<ul>
-<li>Specific user types can only access specific pages</li>
-<li>Cross-Site Request Forgery (CSRF) Protection</li>
-<li>Force https on server</li>
-<li>Add security headers</li>
-<li>Form set with csrf token</li>
-<li>Secure Logout</li>
-<li>Error handling</li>
-</ul>
-
 ## SSL Certificate
 
 Genarate via SSl Certificate by using this link 🔗<a href="https://youtu.be/zrbaE1Wdviw">youtube</a> for your loocal project
+
+# 🍽️ The Gallery Café - Web Application
+
+This project is a web application for **The Gallery Café**, designed to manage restaurant operations efficiently. It includes a range of features tailored for customers, employees, and administrators, with a strong emphasis on security and user experience.
+
+## 🚀 Main Features
+
+- **Cart Management**: Add, remove, clear, and submit items in the cart.
+- **User Authentication**:
+  - Login
+  - Signup
+  - Logout
+  - Reset Password
+  - OTP Sending
+  - User Verification
+- **Reservations**: Make and manage table reservations.
+- **User Profile**: Edit and update profile information.
+
+## 🏷️ Admin Functions
+
+- **User Management**:
+  - Add new users (customers, admins, staff)
+  - Manage existing users (employees and customers)
+- **Menu Management**:
+  - Add, update, and delete menu items
+  - Manage menu item categories
+- **Order Management**: Oversee both online and in-shop orders.
+- **Reservations Management**: Manage customer reservations.
+- **Restaurant Management**:
+  - Manage tables and their types
+  - View order and reservation details
+
+## 🏷️ Employee Functions
+
+- **Menu Management**: Update and manage menu items.
+- **Order Management**: Oversee online and in-shop orders.
+- **Reservations Management**: Handle customer reservations.
+- **Restaurant Management**: Manage restaurant tables.
+- **View Information**: Access order and reservation details.
+
+## 🏷️ Customer Functions
+
+- **Ordering**: Place and manage online orders.
+- **Reservations**: Book and manage restaurant reservations.
+- **Menu Browsing**: View available menu items.
+
+## ⚙️ Utility and Security Features
+
+- **Access Control**: Different user roles have restricted access to specific pages.
+- **Cross-Site Request Forgery (CSRF) Protection**: Enhanced form security.
+- **HTTPS**: Enforce secure communication.
+- **Security Headers**: Implement additional HTTP security headers.
+- **CSRF Tokens**: Forms are secured with CSRF tokens.
+- **Secure Logout**: Proper session termination.
+- **Error Handling**: Robust error management for a smoother user experience.
+- **SSL Certificate**: Ensure a secure connection.
+  - Generate an SSL Certificate for local projects using [this tutorial](🔗youtube).
+
+## 🛠️ Installation & Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/KevinThulnith/Restaurant-Website.git
+   ```
