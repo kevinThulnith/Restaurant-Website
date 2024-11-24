@@ -1,3 +1,9 @@
+![Static Badge](https://img.shields.io/badge/JavaScript-%23F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Static Badge](https://img.shields.io/badge/html5-%23E34F26?style=for-the-badge&logo=html5&logoColor=black)
+![Static Badge](https://img.shields.io/badge/css3-%231572B6?style=for-the-badge&logo=css3&logoColor=black)
+![Static Badge](https://img.shields.io/badge/php-%23777BB4?style=for-the-badge)
+![Static Badge](https://img.shields.io/badge/mysql-%234479A1?style=for-the-badge)
+
 # Restaurant-Website (Full stack)
 
 Full stack restuarant website developed with Php, Css, Html, JavaScript, Composer

@@ -43,7 +43,7 @@ if (!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] !== 'on') {
   exit();
 }
 
-// !et secure session settings
+// !secure session settings
 ini_set('session.cookie_httponly', 1);  // Prevent JavaScript access to session cookies
 ini_set('session.cookie_secure', 1);    // Ensure cookies are sent over HTTPS only
 ini_set('session.use_only_cookies', 1); // Force the use of cookies for sessions
@@ -102,20 +102,20 @@ function sendMail(String $sender, String $name, String $subject, String $body)
 
   try {
     //Server settings
-    $mail->isSMTP();                                    // Set mailer to use SMTP
-    $mail->Host = 'smtp.gmail.com';                     // Specify main and backup SMTP servers
-    $mail->SMTPAuth = true;                             // Enable SMTP authentication
-    $mail->Username = 'gmail address';           // SMTP username
-    $mail->Password = 'gmail adress app password';              // SMTP password (use an app password if 2FA is enabled)
-    $mail->SMTPSecure = 'tls';                           // Enable TLS encryption, `ssl` also accepted
-    $mail->Port = 587;                                  // TCP port to connect to
+    $mail->isSMTP();                                      // Set mailer to use SMTP
+    $mail->Host = 'smtp.gmail.com';                       // Specify main and backup SMTP servers
+    $mail->SMTPAuth = true;                               // Enable SMTP authentication
+    $mail->Username = 'eyenebula45@gmail.com';            // SMTP username
+    $mail->Password = 'xmupqjbxduldfvucxmupqjbxduldfvuc'; // SMTP password (use an app password if 2FA is enabled)
+    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+    $mail->Port = 587;                                    // TCP port to connect to
 
     //Recipients
     $mail->setFrom('gmail address', 'Gallery Cafe');
     $mail->addAddress($sender, $name);     // Add a recipient
 
     // Content
-    $mail->isHTML(true);                                        // Set email format to HTML
+    $mail->isHTML(true);                   // Set email format to HTML
     $mail->Subject = $subject;
     $mail->Body    = $body;
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
@@ -126,7 +126,7 @@ function sendMail(String $sender, String $name, String $subject, String $body)
   }
 }
 
-// mas email
+// mask email
 function maskEmail($email)
 {
   list($username, $domain) = explode('@', $email);
