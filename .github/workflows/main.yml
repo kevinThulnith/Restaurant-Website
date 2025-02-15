@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: CI
 
 on:
   push:
@@ -14,89 +14,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16' # Use the Node.js version your project requires
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.1" # Change to your project's PHP version
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install Composer dependencies
+        run: composer install --no-dev --prefer-dist
 
-    - name: Run tests
-      run: npm test
+      - name: Run tests
+        run: vendor/bin/phpunit # Ensure you have PHPUnit set up
 
-    - name: Lint code
-      run: npm run lint
-
-  security:
-    name: Security Checks
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-
-    - name: Run security linting
-      run: npm run lint:security # Use a security linting tool if configured
-
-    - name: Check for known vulnerabilities
-      uses: alex-page/npm-audit-action@v1 # Or use an equivalent security audit tool
-
-    - name: Security Headers Check
-      run: |
-        curl -I https://yourdomain.com | grep -i 'X-Content-Type-Options: nosniff'
-        curl -I https://yourdomain.com | grep -i 'X-Frame-Options: DENY'
-
-  deploy:
-    name: Deploy to Server
-    runs-on: ubuntu-latest
-    needs: build
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16'
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Build project
-      run: npm run build
-
-    - name: Deploy to server
-      env:
-        DEPLOY_SERVER: ${{ secrets.DEPLOY_SERVER }}
-        DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
-        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
-      run: |
-        ssh -i $DEPLOY_KEY $DEPLOY_USER@$DEPLOY_SERVER 'cd /path/to/project && git pull && npm install && npm run build && pm2 restart all'
-
-  ssl:
-    name: SSL Certificate Check
-    runs-on: ubuntu-latest
-    needs: deploy
-
-    steps:
-    - name: Verify SSL Certificate
-      run: |
-        echo | openssl s_client -showcerts -servername yourdomain.com -connect yourdomain.com:443 2>/dev/null | openssl x509 -noout -dates
-
-  clean-up:
-    name: Cleanup and Maintenance
-    runs-on: ubuntu-latest
-    needs: deploy
-
-    steps:
-    - name: Remove old session files
-      run: |
-        find /path/to/sessions -type f -mtime +7 -exec rm {} \;
-
-    - name: Clear cache (if applicable)
-      run: npm run cache:clear
+      - name: Lint PHP code
+        run: composer run-script lint # Ensure a lint script is in your composer.json
