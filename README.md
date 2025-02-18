@@ -1,8 +1,8 @@
-![Static Badge](https://img.shields.io/badge/JavaScript-%23F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Static Badge](https://img.shields.io/badge/html5-%23E34F26?style=for-the-badge&logo=html5&logoColor=black)
-![Static Badge](https://img.shields.io/badge/css3-%231572B6?style=for-the-badge&logo=css3&logoColor=black)
-![Static Badge](https://img.shields.io/badge/php-%23777BB4?style=for-the-badge)
-![Static Badge](https://img.shields.io/badge/mysql-%234479A1?style=for-the-badge)
+![Static Badge](https://img.shields.io/badge/HTML5-%23E34F26?style=flat&logo=HTML5&logoColor=white&color=%23E34F26)
+![Static Badge](https://img.shields.io/badge/CSS3-%231572B6?style=flat&logo=CSS3&logoColor=whitw&color=%231572B6)
+![Static Badge](https://img.shields.io/badge/JavaScript-%23F7DF1E?style=flat&logo=javaScript&logoColor=black&color=%23F7DF1E)
+![Static Badge](https://img.shields.io/badge/PHP-%23777BB4?style=flat&logo=PHP&logoColor=white&color=%23777BB4)
+![Static Badge](https://img.shields.io/badge/MYSQL-%234479A1?style=flat&logo=MYSQL&logoColor=white&color=%234479A1)
 
 # 🍽️ The Gallery Café - Web Application
 
