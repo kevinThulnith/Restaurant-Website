@@ -165,4 +165,6 @@ We welcome contributions from the community! Feel free to submit pull requests o
 
 For any questions or suggestions, reach out via issues or discussions in the repository.
 
+---
+
 Made with ❤️ by Kevin Thulnith
