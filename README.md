@@ -6,7 +6,7 @@
 
 # 🍽️ The Gallery Café - Web Application
 
-A fully functional, feature-rich restaurant website built using <b>PHP</b>, <b>MySQL</b>, <b>JavaScript</b>, <b>HTML5</b>, and <b>CSS3</b>. Designed for a seamless online experience, this web application provides an interactive way for customers to browse the menu, place orders, and reserve tables while also offering robust management functionalities for restaurant staff and administrators.
+A fully functional, feature-rich restaurant website built using <b>PHP</b>, <b>MySQL</b>, <b>JavaScript</b>, <b>HTML5</b>, and <b>CSS3</b>. Designed for a seamless online experience, this web application provides an interactive way for customers to browse the menu, place orders, and reserve tables while also offering robust management functionalities for restaurant staff and administrators. hosted on <a href="galleryCafe.infinityfreeapp.com"> Link </a>.
 
 <img src="images/picture10.jpg"><br>
 
