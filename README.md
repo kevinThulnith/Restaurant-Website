@@ -3,6 +3,7 @@
 ![Static Badge](https://img.shields.io/badge/JavaScript-%23F7DF1E?style=flat&logo=javaScript&logoColor=black&color=%23F7DF1E)
 ![Static Badge](https://img.shields.io/badge/PHP-%23777BB4?style=flat&logo=PHP&logoColor=white&color=%23777BB4)
 ![Static Badge](https://img.shields.io/badge/MYSQL-%234479A1?style=flat&logo=MYSQL&logoColor=white&color=%234479A1)
+![Static Badge](https://img.shields.io/badge/Composer-885630?style=flat&logo=Composer&logoColor=white)
 
 # 🍽️ The Gallery Café - Web Application
 
